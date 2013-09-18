@@ -41,7 +41,7 @@ if ('development' == app.get('env')) {
 }
 
 //Load up config
-nconf.file({ file: './tmp/config.json' });
+nconf.file({ file: '.tmp/config.json' });
 
 // init sendgrid instance
 var mailservice = require('sendgrid')(nconf.get('notification:sendgrid:apiuser'), nconf.get('notification:sendgrid:apikey'));
