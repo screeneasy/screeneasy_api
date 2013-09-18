@@ -4,7 +4,6 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var passport = require('passport');
 var app = express();
 var nconf = require('nconf');
 
@@ -33,8 +32,6 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser('secret'));
 app.use(express.session());
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
