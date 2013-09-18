@@ -47,9 +47,15 @@ See [Config README](utils/README.md) for details
 - You may also need to install postgresql-server-dev package (e.g: sudo apt-get install postgresql-server-dev-9.1)
 ```
 
+# Proc file
+```
+web: node app.js
+```
+
 # Deploy
 ```
 - git push heroku master
 - heroku addons:add shared-database
 - heroku run node schema.js
+- heroku ps:scale web=1
 ```
