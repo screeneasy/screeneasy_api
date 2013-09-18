@@ -1,0 +1,22 @@
+{
+  "twitter": {
+    "key": "0Ipb0QPGm9SMerPrANOOg",
+    "secret": "hKII699dQ2ezk52O9XIpJhuZnCIHGulTfsGiVnDPmK8",
+    "callback_url":"http://127.0.0.1:3000/auth/twitter/callback"
+  },
+  "github": {
+    "key":"a051efab66efc9d84a61",
+    "secret":"772d42562bab4b9467d6c58fc0047c2528ba1b45",
+    "callback_url":"http://127.0.0.1:3000/auth/github/callback"
+  },
+  "notification": {
+    "sendgrid": {
+       "apiuser": "johngu",
+       "apikey": "battlehack"
+    }
+  },
+  "db": {
+    "dsn":"postgres://wlzommgfkwkphw:nVr1YfwwM34Ud8zYwuVBlUf15C@ec2-107-20-245-109.compute-1.amazonaws.com:5432/daiko3u476p6qp",
+    "mongo": "mongodb://write:coolbreadshirt@widmore.mongohq.com:10000/ScreenEasy"
+  }
+}
