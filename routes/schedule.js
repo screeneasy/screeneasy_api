@@ -21,10 +21,6 @@ module.exports = function(app, nconf) {
 
    mongoose.connect(connectionString);
 
-   app.options('/interview', function(req,res) {
-      res.send(200);
-   });
-
    app.post('/interview', function(req,res) {
       var interview = new Interview(req.body);
       interview.save(function (err) {
@@ -38,6 +34,10 @@ module.exports = function(app, nconf) {
 
    });
 
+   app.options('/interview', function(req,res) {
+      res.send(200);
+   });
+
    app.get('/interview', function(req,res) {
 
       Interview.find({},function(err, data) {
@@ -45,7 +45,9 @@ module.exports = function(app, nconf) {
             res.send({status: 'error', message: 'failed to find interviews'});
          }
          else {
-            res.send(data);
+            var result = {};
+            result.data = data;
+            res.send(result);
          }
       })
    });
